@@ -1,0 +1,44 @@
+<h2>Завдання на лабораторну роботу</h2>
+<div class="zavd">
+  Базовий клас: Зошит (поле: назва, кількість аркушів - k) <br>
+  Метод: Вартість: 15k <br>
+  Нащадок: Загальний (поле - матеріал обкладинки) <br>
+  Зміни в нащадках: Змінити вартість з урахуванням
+  надбавки за обкладинку на 50грн.
+</div>
+
+<div class="container">
+  <section class="filters">
+    <h3>Розрахунок вартості зошитів</h3>
+
+    <fieldset>
+      <legend>Зошит</legend>
+      Назва:
+      <input type="text" value="Звичайний" #nbName><br>
+      Кількість аркушів:
+      <input type="number" value="10" #nbPages><br>
+      Вартість: <span>{{ notebook_show }}</span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Загальний зошит</legend>
+      Назва:
+      <input type="text" value="Для всього" #gnName><br>
+      Кількість аркушів:
+      <input type="number" value="20" #gnPages><br>
+      Матеріал обкладинки:
+      <input type="text" value="Шкіра" #gnCover><br>
+      Вартість: <span>{{ general_notebook_show }}</span>
+    </fieldset>
+
+  </section>
+</div>
+
+<button class="button"
+        (click)="calcNotebooks(
+    nbName.value, nbPages.value,
+    gnName.value, gnPages.value,
+    gnCover.value
+  )">
+  Обчислити вартість
+</button>

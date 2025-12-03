@@ -1,0 +1,29 @@
+<section class="task">
+  <div>
+    <h2>Завдання: одновимірні масиви</h2>
+    <p>
+      Створіть масив з п'яти прізвищ і виведіть їх на екран<br>
+      стовпчиком, починаючи з останньої.
+    </p>
+  </div>
+
+  <div>
+    <button class="button" (click)="showReversed()">
+      <span>Показати прізвища у зворотньому порядку</span>
+    </button>
+  </div>
+</section>
+
+<section class="task">
+  <h2>Прізвища</h2>
+
+  <div class="surnames-list">
+    <p *ngIf="reversedList.length === 0" class="placeholder">
+      Натисніть кнопку вище, щоб побачити прізвища
+    </p>
+
+    <p *ngFor="let surname of reversedList; let i = index">
+      {{ i + 1 }}. {{ surname }}
+    </p>
+  </div>
+</section>

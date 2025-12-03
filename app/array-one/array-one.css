@@ -1,0 +1,11 @@
+.task {
+  margin: 20px 0;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ffc1c1;
+  border: 2px solid #a43838;
+  border-radius: 8px;
+  cursor: pointer;
+}
